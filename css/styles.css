@@ -1,20 +1,32 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 /* Header styles */
 .header-block {
-    max-width: 1366px;
+    
     width: 100%;
     background-repeat: no-repeat;
     height: 324px;
     background-image: url(../images/header-image.jpg);
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     margin: 0 auto;
     background-size: 100% 100%;
 }
 .nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 564px;
     width: 100%;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin-left: 439px;
     text-transform: uppercase;
     position: absolute;
@@ -38,9 +50,12 @@
     
 }
 .left-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 136px;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin-left: 135px;
     margin-top: 14px;
     font-family: 'Poppins', sans-serif;
@@ -48,6 +63,8 @@
     font-size: 14px;
 }
 .line {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 1px;
     height: 19px;
@@ -133,9 +150,15 @@
     height: 50px;
     background-color: #5863F8;
     margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items:center;
-    justify-content: center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     color: #FFFFFF;
@@ -148,15 +171,23 @@
     
 }
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 1101px;
     margin: 0 auto;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .top-right-images {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     max-width: 536px;
     width: 100%;
     margin-bottom: 16px;
@@ -169,8 +200,13 @@
         background-image: url(../images/image1.jpg);
         background-image: url(../images/image2.jpg);
         background-size: contain;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width: 100%;
     }
    
@@ -181,21 +217,22 @@
 
 /* Bottom block styles */
 .bottom-block {
-    max-width: 1366px;
+    
     width: 100%;
     background-repeat: no-repeat;
-    height: 612px;
+    height: 100%;
     background-image: url(../images/section-image.jpg);
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-size: 100% 100%;
     margin-top: 90px;
-    position: relative;
-
+    padding-bottom: 50px;
+    
 }
 .div-text {
-    top: 90px;
-    position: absolute;
-    left: 139px;
+    margin-left: 110px;
+    padding-top: 30px;
 }
 .bottom-block h3 {
     text-transform: uppercase;
@@ -217,9 +254,16 @@
     height: 260px;
     width: 100%;
     background-color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 34px;
     
 }
@@ -228,9 +272,15 @@
     width: 59px;
     height: 58px;
     border-radius: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items:center;
-    justify-content: center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 15px;
     margin-top: 27px;
 }
@@ -253,15 +303,17 @@
     
 }
 .div-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 1088px;
     height: auto;
     width: 100%;
-    justify-content: space-between;
-    top: 262px;
-    left: 139px;
-    position: absolute;
-    flex-wrap: wrap;
+    -ms-flex-pack:distribute;
+        justify-content:space-around;
+    margin: 0 auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     
 }
@@ -274,4 +326,55 @@
         width: 45%;
         
     } 
+}
+.textarea-block {
+    width: 100%;
+    height: 288px;
+    resize: none;
+    background: #F8F8F8;  
+}
+.form-block {
+    max-width:720px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 16px;  
+}
+.input-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 352px;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 16px;
+
+}
+.input-block:focus,
+.textarea-block:focus {
+    outline: none;
+}
+.section-class {
+    margin-top: 30px;
+    width: 100%;
+}
+.read1 {
+    max-width: 352px;
+    height: 50px;
+    background-color: #5863F8;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    
 }
